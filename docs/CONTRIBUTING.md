@@ -9,14 +9,15 @@ The following is a set of guidelines for contributing to a WE project. These are
 
 # Changes
 Changes are classified as [production or non-production changes](https://kb.extendhealth.com/x/5AZmEQ).  If changes are expected to be release to production or impact production, they are considered production changes.  
-All other changes, should still follow our [quality standards](https://kb.extendhealth.com/x/jcFaCg) but do not need to adhere to our [SDLC Policy]() nor [Audit Controls]().
+
+All other changes, should still follow our [quality standards](https://kb.extendhealth.com/x/jcFaCg) but do not need to adhere to our [SDLC Policy](https://kb.extendhealth.com/x/4IMnEQ) nor [Audit Controls](https://kb.extendhealth.com/x/5oMnEQ).
 
 - Major and minor changes are indicated by a version bump using [SemVer](https://semver.org/). Versions are captured in GitHub Releases.
 - Any [architectural changes](#architecture) made to this project are documented under `/docs` decisions folder as a decision record, UML diagram, sequence diagram, etc.
 - [Definition of Confidence (DoC)](#definiton-of-confidence) is reviewed and related strategies discussed
-- If a [production change](https://kb.extendhealth.com/x/5AZmEQ), a [technical attestation]() is performed by a _technical attestor_
+- If a [production change](https://kb.extendhealth.com/x/5AZmEQ), a [technical attestation](https://kb.extendhealth.com/x/2gZmEQ) is performed by a _technical attestor_
 
-## Audit Evidence
+### Audit Evidence
 Building on the WE Product Family's [Definition of Confidence](https://kb.extendhealth.com/x/jcFaCg), this project's pull requests act as _[technical attestations](https://kb.extendhealth.com/x/2gZmEQ)_.
 
 _If the change is expected to be r[eleased or impact production](https://kb.extendhealth.com/x/5AZmEQ):_
@@ -29,15 +30,17 @@ A project repo's administrator is responsible for verifing that any production c
 
 > See [WE: Audit Evidence KB](https://kb.extendhealth.com/x/kYGBD) for additional details
 
-# Creating a Pull Request
+# Create a Pull Request
 In most cases, changes are implemented in a [Feature Branch git Workflow](https://kb.extendhealth.com/x/T58QEg) style, generating a [Pull Request](https://kb.extendhealth.com/x/UTWwCg) reviewed by a [technical attestor](https://kb.extendhealth.com/x/2gZmEQ).
 
 _When creating a PR:_
-- Add a brief description of the changes
-- If UI changes, include a screenshot of those changes
-- Add JIRA Issue to title of PR
-- Add the owner of the unit of work as the _Assignee_
 - Indicate if the PR is in WIP
+- Add a brief description of the changes
+- Indicate if the PR is a production change
+  - Add JIRA Issue to title of PR
+  - Add a [technical attestor](https://kb.extendhealth.com/x/2gZmEQ) as a _Reviewer_
+- Add the owner of the unit of work (usually yourself) as the _Assignee_
+- If UI changes, include a screenshot of those changes
 
 > For additional details on what is expected during a PR, see [WE: Pull Request Guidelines](https://kb.extendhealth.com/x/UTWwCg)
 
@@ -59,7 +62,7 @@ As part of the pull requests, parties involved in a unit of work review the [Def
 
 ### Risk Assessment Strategy
 - [ ] Was a [risk assessment](https://kb.extendhealth.com/x/o5H7Cg) performed and documented on the unit of work?
-- [ ] If needed, was a [security threat model assessment]() performed and documented on the unit of work?
+- [ ] If needed, was a [security threat model assessment](https://kb.extendhealth.com/x/YJeFCg) performed and documented on the unit of work?
 - [ ] [Testing Standards](https://kb.extendhealth.com/x/kq5oCQ): are there any manual tests that can and should be converted to automated tests?
 
 ---
