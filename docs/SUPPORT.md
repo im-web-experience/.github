@@ -1,10 +1,11 @@
+# Support
+For build support, see the project's `README.md`.  For additional _system arthiceture metadata_, see the projects `sam.yaml` file.  Other technical documentation may be found in the project's GitHub Wiki and/or [Confluence Technical Service directory](https://kb.extendhealth.com/x/AYbyCw).
+
 ### Contents
-- [Communication](#communication) & [OKRs](objectives--key-results)
+- [Communication](#communication) & [OKRs](#objectives--key-results)
 - [SDLC](#software-development-life-cycle) & [Audit Evidence](#audit-evidence)
 - [Standards](#standards--guidelines) & [Architecture](#architecture)
 - [Decision Records](#decision-records)
-
-# Support
 
 ## Communication
 - **Chat**: [#web-experience](https://wtw-im.slack.com/messages/CAYDVP41X) Slack channel
@@ -24,7 +25,7 @@ Units of work are prioritized against a backlog in our [WE Jira Project](https:/
 
 In most cases, changes are implemented in a [Feature Branch git Workflow](https://kb.extendhealth.com/x/T58QEg) style, generating a [Pull Request](https://kb.extendhealth.com/x/UTWwCg) that is reviewed by a [technical attestor](https://kb.extendhealth.com/x/2gZmEQ).
 
-_Production_ changes are merged into the repo's `master` branch, built & tested in CI and cleared in an _integrated environment_ prior to deployment. 
+[Production changes](https://kb.extendhealth.com/x/5AZmEQ) are merged into the repo's `master` branch, built & tested in CI and cleared in an _integrated environment_ prior to deployment. 
 
 Every [release artifact](https://kb.extendhealth.com/x/nQepEQ) is cleared by a [Technical, QA and Stakeholder attestation](https://kb.extendhealth.com/x/2gZmEQ), certifing that the changes satsify our [Definition of Confidence](https://kb.extendhealth.com/x/jcFaCg) & [proof of testing](https://kb.extendhealth.com/x/fwcnEg).
 
@@ -48,9 +49,18 @@ Defined product family standards, strategies, guidelines and various solutions f
 - [Analytical Standards](https://kb.extendhealth.com/x/KyOwCg)
 - [Automated Testing Standards](https://kb.extendhealth.com/x/5RuwCg)
 
+## Bug Management
+Using a form of [Zero Bugs Policy](https://kb.extendhealth.com/x/wSyGCQ), bugs are first brought to the attention of the Product Manages who, in turn, assess and evaluate if a bug is legitimate which is then prioritized against the existing backlog.
+
+Bugs are filed in the [WE: Jira Project](https://kb.extendhealth.com/x/EBCGCQ) referncing the technical service using a _JIRA Component_.
+
+> See [WE: Bug Management](https://kb.extendhealth.com/x/wSyGCQ) for details
+
 ## Architecture
 The architectural strategy follows the patterns and processes from our architecture strategy team. We approach all our stories and items we’re validating by determining what bounded context the work best fits into. From there we either begin the process of creating the new bounded context services or we start the work in the existing bounded context.
 
+- Build steps - `README.md`
+- System Architecture Metadata - `sam.yaml`
 - [Taxonomy](https://kb.extendhealth.com/x/dByUCg)
 - [Site Composition](https://kb.extendhealth.com/x/DZcYCg)
 - [Infrastructure](https://kb.extendhealth.com/x/NZ3XCg)
