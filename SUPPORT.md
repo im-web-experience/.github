@@ -5,7 +5,7 @@ Other technical documentation may be found in the project's GitHub Wiki and/or [
 
 ### Contents
 - [Communication](#communication) & [OKRs](#objectives--key-results)
-- [SDLC](#software-development-life-cycle)& [Audit Evidence](#audit-evidence)
+- [SDLC](#software-development-life-cycle) & [Audit Evidence](#audit-evidence)
 - [Bug Magagement](#bug-management)
 - [Standards](#standards--guidelines) & [Architecture](#architecture)
 - [Decision Records](#decision-records)
