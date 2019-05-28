@@ -1,5 +1,7 @@
 # Support
-For build support, see the project's `README.md`.  For additional _system arthiceture metadata_, see the projects `sam.yaml` file.  Other technical documentation may be found in the project's GitHub Wiki and/or [Confluence Technical Service directory](https://kb.extendhealth.com/x/AYbyCw).
+For build support, see the project's `README.md`.  For additional _system arthiceture metadata_, see the projects `sam.yaml` file.  
+
+Other technical documentation may be found in the project's GitHub Wiki and/or [Confluence Technical Service directory](https://kb.extendhealth.com/x/AYbyCw).
 
 ### Contents
 - [Communication](#communication) & [OKRs](#objectives--key-results)
