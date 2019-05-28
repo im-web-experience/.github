@@ -5,7 +5,8 @@ Other technical documentation may be found in the project's GitHub Wiki and/or [
 
 ### Contents
 - [Communication](#communication) & [OKRs](#objectives--key-results)
-- [SDLC](#software-development-life-cycle) & [Audit Evidence](#audit-evidence)
+- [SDLC](#software-development-life-cycle)& [Audit Evidence](#audit-evidence)
+- [Bug Magagement](#bug-management)
 - [Standards](#standards--guidelines) & [Architecture](#architecture)
 - [Decision Records](#decision-records)
 
@@ -22,6 +23,7 @@ Other technical documentation may be found in the project's GitHub Wiki and/or [
 The product family defines yearly product level objectives.  The teams within generate quarterly objectives that cascade up to product level key results.
 > See [Objectives & Key Results KB](https://kb.extendhealth.com/x/OK1oCQ) for a list of objectives and key results
 
+---
 # Software Development Life Cycle
 Units of work are prioritized against a backlog in our [WE Jira Project](https://jira.extendhealth.com/secure/RapidBoard.jspa?rapidView=665) by [Product Owners](https://kb.extendhealth.com/x/5bNaCg) and owning teams.
 
@@ -42,6 +44,14 @@ GitHub [Pull Request](https://kb.extendhealth.com/x/UTWwCg), reviewed by a [tech
 
 > See [WE: Audit Evidence KB](https://kb.extendhealth.com/x/kYGBD) for additional details around our the audit evidence we provide
 
+## Bug Management
+Using a form of [Zero Bugs Policy](https://kb.extendhealth.com/x/wSyGCQ), bugs & security issues are first brought to the attention of the _Product Manage_ who, in turn, assess and evaluates if its priority and severity.
+
+Bugs are filed in the [WE: Jira Project](https://kb.extendhealth.com/x/EBCGCQ) referncing the [technical service](https://kb.extendhealth.com/x/5AZmEQ) by a _JIRA Component_.
+
+> See [WE: Bug Management](https://kb.extendhealth.com/x/wSyGCQ) for details
+
+---
 ## Standards & Guidelines
 Defined product family standards, strategies, guidelines and various solutions for both functional and non-functional practices.
 
@@ -50,13 +60,6 @@ Defined product family standards, strategies, guidelines and various solutions f
 - [UI Standards](https://kb.extendhealth.com/x/Uo-7Cg)
 - [Analytical Standards](https://kb.extendhealth.com/x/KyOwCg)
 - [Automated Testing Standards](https://kb.extendhealth.com/x/5RuwCg)
-
-## Bug Management
-Using a form of [Zero Bugs Policy](https://kb.extendhealth.com/x/wSyGCQ), bugs are first brought to the attention of the Product Manages who, in turn, assess and evaluate if a bug is legitimate which is then prioritized against the existing backlog.
-
-Bugs are filed in the [WE: Jira Project](https://kb.extendhealth.com/x/EBCGCQ) referncing the technical service using a _JIRA Component_.
-
-> See [WE: Bug Management](https://kb.extendhealth.com/x/wSyGCQ) for details
 
 ## Architecture
 The architectural strategy follows the patterns and processes from our architecture strategy team. We approach all our stories and items we’re validating by determining what bounded context the work best fits into. From there we either begin the process of creating the new bounded context services or we start the work in the existing bounded context.
