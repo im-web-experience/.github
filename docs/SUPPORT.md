@@ -1,23 +1,22 @@
 ### Contents
-- [Communication](#communication) & [OKRs]()
+- [Communication](#communication) & [OKRs](objectives--key-results)
 - [SDLC](#software-development-life-cycle) & [Audit Evidence](#audit-evidence)
-- [Standards](#standards) & [Architecture](#architecture)
+- [Standards](#standards--guidelines) & [Architecture](#architecture)
 - [Decision Records](#decision-records)
 
-# Communication
+# Support
+
+## Communication
 - **Chat**: [#web-experience](https://wtw-im.slack.com/messages/CAYDVP41X) Slack channel
 - **Jira**: [WE Jira Project](https://kb.extendhealth.com/x/EBCGCQ)
 - **KB**: [Web Experience Confluence Space](https://kb.extendhealth.com/x/TaVoCQ)
 - **Team Ownership Distribution**: https://kb.extendhealth.com/x/5bNaCg
+- **Production Support**: [alert responders](https://kb.extendhealth.com/x/iQLHCw) are assigned to each [technical service](https://kb.extendhealth.com/x/5AZmEQ) owned by the product family
 
 > See [WE Communication KB](https://kb.extendhealth.com/x/TBJGCg) for additional details
 
-# Production Support
-Alert responders are assigned to each [technical service](https://kb.extendhealth.com/x/5AZmEQ) owned by the product family.
-> See [WE: Production Support KB](https://kb.extendhealth.com/x/iQLHCw) for additional details
-
-# Objectives & Key Results
-The WE Product Family defines yearly product level objectives.  The teams within generate quarterly objectives that cascade up to product level key results.
+## Objectives & Key Results
+The product family defines yearly product level objectives.  The teams within generate quarterly objectives that cascade up to product level key results.
 > See [Objectives & Key Results KB](https://kb.extendhealth.com/x/OK1oCQ) for a list of objectives and key results
 
 # Software Development Life Cycle
