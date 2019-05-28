@@ -2,10 +2,17 @@
 The following is a set of guidelines for contributing to a WE project. These are mostly guidelines, not rules.
 
 ### Contents
-- [Changes](#communication) & [Audit Evidence](#audit-evidence)
+- [Contributing](#contributing)
+    - [Contents](#contents)
+- [Changes](#changes)
+    - [Audit Evidence](#audit-evidence)
 - [Create a Pull Request](#create-a-pull-request)
-- [Definition of Confidence](#definition-of-confidence)
-- [Architecture](#architecture) & [Decision Records](#decision-records)
+  - [Definition of Confidence](#definition-of-confidence)
+  - [Strategies](#strategies)
+    - [Architecture Strategy](#architecture-strategy)
+    - [Risk Assessment Strategy](#risk-assessment-strategy)
+  - [Architecture](#architecture)
+    - [Decision Records](#decision-records)
 
 # Changes
 Changes are classified as [production or non-production changes](https://kb.extendhealth.com/x/5AZmEQ).  If changes are expected to be release to production or impact production, they are considered production changes.  
@@ -18,9 +25,9 @@ All other changes, should still follow our [quality standards](https://kb.extend
 - If a [production change](https://kb.extendhealth.com/x/5AZmEQ), a [technical attestation](https://kb.extendhealth.com/x/2gZmEQ) is performed by a _technical attestor_
 
 ### Audit Evidence
-Building on the WE Product Family's [Definition of Confidence](https://kb.extendhealth.com/x/jcFaCg), this project's pull requests act as _[technical attestations](https://kb.extendhealth.com/x/2gZmEQ)_.
+Building on the WE Product Family's [Definition of Confidence](https://kb.extendhealth.com/x/jcFaCg), this project's pull requests act as the _[technical attestation](https://kb.extendhealth.com/x/2gZmEQ)_.
 
-_If the change is expected to be r[eleased or impact production](https://kb.extendhealth.com/x/5AZmEQ):_
+_If the change is expected to be [released or impact production](https://kb.extendhealth.com/x/5AZmEQ):_
 1. PR must be approved by atleast one [technical attestor](https://kb.extendhealth.com/x/2gZmEQ) certifing that the changes satsify our [Definition of Confidence (DoC)](https://kb.extendhealth.com/x/jcFaCg)
 1. Each commit must reference a JIRA Story
 1. At least one automated tests is ran in CI
