@@ -30,6 +30,7 @@ A project repo's administrator is responsible for verifing that any production c
 
 > See [WE: Audit Evidence KB](https://kb.extendhealth.com/x/kYGBD) for additional details
 
+---
 # Create a Pull Request
 In most cases, changes are implemented in a [Feature Branch git Workflow](https://kb.extendhealth.com/x/T58QEg) style, generating a [Pull Request](https://kb.extendhealth.com/x/UTWwCg) reviewed by a [technical attestor](https://kb.extendhealth.com/x/2gZmEQ).
 
@@ -50,12 +51,17 @@ As part of the pull requests, parties involved in a unit of work review the [Def
 ## Strategies
 ### Architecture Strategy
 - [ ] [Coding Convention Standards](https://kb.extendhealth.com/x/LYUWD)
-- [ ] [Performance Standards](https://kb.extendhealth.com/x/yJMYCg): additional latency or load time has not been introduced?
-- [ ] [Transient Fault Handling Standards](https://kb.extendhealth.com/x/MISwCw): coded with the anticipation of failure?
-- [ ] [Security Standards](https://kb.extendhealth.com/x/84qvCQ): newly introduced logic meets our security standards?
+  - [ ] [Performance Standards](https://kb.extendhealth.com/x/yJMYCg): additional latency or load time has not been introduced?
+  - [ ] [Transient Fault Handling Standards](https://kb.extendhealth.com/x/MISwCw): coded with the anticipation of failure?
+  - [ ] [Security Standards](https://kb.extendhealth.com/x/84qvCQ): newly introduced logic meets our security standards?
 - [ ] [UI Standards](https://kb.extendhealth.com/x/Uo-7Cg) & [Browser Standards](https://kb.extendhealth.com/x/rwNHD)
-- [ ] [Accessibility Standards](https://kb.extendhealth.com/x/CNoYCg)
+  - [ ] [Accessibility Standards](https://kb.extendhealth.com/x/CNoYCg)
+  - [ ] [React Standards](https://kb.extendhealth.com/x/_wdtE) & [Styled Component Standards](https://kb.extendhealth.com/x/-gVtE)
 - [ ] [Automated Testing Standards](https://kb.extendhealth.com/x/5RuwCg)
+  - [ ] [Asp.Net Integration Tests](https://kb.extendhealth.com/x/bQHADQ)
+  - [ ] [Jest Standards](https://kb.extendhealth.com/x/1xDtDw)
+  - [ ] [Postman Standards](https://kb.extendhealth.com/x/c4IOCw)
+  - [ ] [Cypress Standards](https://kb.extendhealth.com/x/mRyUCg)
 - [ ] [Infrastructure Standards](https://kb.extendhealth.com/x/IwApCw)
 - [ ] [Analytical Standards](https://kb.extendhealth.com/x/KyOwCg)
 - [ ] [Documentation Standards](https://kb.extendhealth.com/x/KQApCw): new technical documentation has been added to the appropriate location?
