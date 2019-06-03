@@ -15,25 +15,25 @@ The following is a set of guidelines for contributing to a WE project. These are
     - [Decision Records](#decision-records)
 
 # Changes
-Changes are classified as [production or non-production changes](https://kb.extendhealth.com/x/5AZmEQ).  If changes are expected to be release to production or impact production, they are considered production changes.  
+Changes are classified as [production or non-production changes](https://kb.extendhealth.com/x/HQSLEg).  If changes are expected to be release to production or impact production, they are considered production changes.  
 
 All other changes, should still follow our [quality standards](https://kb.extendhealth.com/x/jcFaCg) but do not need to adhere to our [SDLC Policy](https://kb.extendhealth.com/x/4IMnEQ) nor [Audit Controls](https://kb.extendhealth.com/x/5oMnEQ).
 
 - Major and minor changes are indicated by a version bump using [SemVer](https://semver.org/). Versions are captured in GitHub Releases.
 - Any [architectural changes](#architecture) made to this project are documented under `/docs` decisions folder as a decision record, UML diagram, sequence diagram, etc.
 - [Definition of Confidence (DoC)](#definiton-of-confidence) is reviewed and related strategies discussed
-- If a [production change](https://kb.extendhealth.com/x/5AZmEQ), a [technical attestation](https://kb.extendhealth.com/x/2gZmEQ) is performed by a _technical attestor_
+- If a [production change](https://kb.extendhealth.com/x/HQSLEg), a [technical attestation](https://kb.extendhealth.com/x/2gZmEQ) is performed by a _technical attestor_
 
 ### Audit Evidence
 Building on the WE Product Family's [Definition of Confidence](https://kb.extendhealth.com/x/jcFaCg), this project's pull requests act as the _[technical attestation](https://kb.extendhealth.com/x/2gZmEQ)_.
 
-_If the change is expected to be [released or impact production](https://kb.extendhealth.com/x/5AZmEQ):_
-1. PR must be approved by atleast one [technical attestor](https://kb.extendhealth.com/x/2gZmEQ) certifing that the changes satsify our [Definition of Confidence (DoC)](https://kb.extendhealth.com/x/jcFaCg)
+_If the change is expected to be [released or impact production](https://kb.extendhealth.com/x/HQSLEg):_
+1. PR must be approved by atleast one [technical attestor](https://kb.extendhealth.com/x/2gZmEQ) certifying that the changes satisfy our [Definition of Confidence (DoC)](https://kb.extendhealth.com/x/jcFaCg)
 1. Each commit must reference a JIRA Story
 1. At least one automated tests is ran in CI
-1. GitHub Release is generated from a successful `master` build in CI
+1. [GitHub Release](https://kb.extendhealth.com/x/nQepEQ) is generated from a successful `master` build in CI
 
-A project repo's administrator is responsible for verifing that any production changes are reviewed by a [technical attestor](https://kb.extendhealth.com/x/2gZmEQ) and approved on a PR.
+A project repo's administrator is responsible for verifying that [any production change](https://kb.extendhealth.com/x/HQSLEg) si approved by a [technical attestor](https://kb.extendhealth.com/x/2gZmEQ) on a [GitHub PR](#create-a-pull-request) and a Jira commit is referenced.
 
 > See [WE: Audit Evidence KB](https://kb.extendhealth.com/x/kYGBD) for additional details
 
@@ -44,7 +44,7 @@ In most cases, changes are implemented in a [Feature Branch git Workflow](https:
 _When creating a PR:_
 - Indicate if the PR is in WIP
 - Add a brief description of the changes
-- Indicate if the PR is a production change
+- Indicate if the PR is a [production change](https://kb.extendhealth.com/x/HQSLEg)
   - Add JIRA Issue to title of PR
   - Add a [technical attestor](https://kb.extendhealth.com/x/2gZmEQ) as a _Reviewer_
 - Add the owner of the unit of work (usually yourself) as the _Assignee_
