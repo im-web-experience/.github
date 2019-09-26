@@ -3,7 +3,6 @@ The following is a set of guidelines for contributing to a WE project. These are
 
 ### Contents
 - [Contributing](#contributing)
-    - [Contents](#contents)
 - [Changes](#changes)
     - [Audit Evidence](#audit-evidence)
 - [Create a Pull Request](#create-a-pull-request)
