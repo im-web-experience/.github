@@ -6,7 +6,7 @@ The following is a set of guidelines for contributing to a WE project. These are
 - [Changes](#changes)
     - [Audit Evidence](#audit-evidence)
 - [Create a Pull Request](#create-a-pull-request)
-  - [Definition of Confidence](#definition-of-confidence)
+  - [Definition of Releasability](#definition-of-releasability)
   - [Strategies](#strategies)
     - [Architecture Strategy](#architecture-strategy)
     - [Risk Assessment Strategy](#risk-assessment-strategy)
@@ -20,14 +20,14 @@ All other changes, should still follow our [quality standards](https://kb.extend
 
 - Major and minor changes are indicated by a version bump using [SemVer](https://semver.org/). Versions are captured in GitHub Releases.
 - Any [architectural changes](#architecture) made to this project are documented under `/docs` decisions folder as a decision record, UML diagram, sequence diagram, etc.
-- [Definition of Confidence (DoC)](#definiton-of-confidence) is reviewed and related strategies discussed
+- [Definition of Releasability (DoR)](#definition-of-releasability) is reviewed and related strategies discussed
 - If a [production change](https://kb.extendhealth.com/x/HQSLEg), a [technical attestation](https://kb.extendhealth.com/x/2gZmEQ) is performed by a _technical attestor_
 
 ### Audit Evidence
-Building on the WE Product Family's [Definition of Confidence](https://kb.extendhealth.com/x/jcFaCg), this project's pull requests act as the _[technical attestation](https://kb.extendhealth.com/x/2gZmEQ)_.
+Building on the WE Product Family's [Definition of Releasability](https://kb.extendhealth.com/x/jcFaCg), this project's pull requests act as the _[technical attestation](https://kb.extendhealth.com/x/2gZmEQ)_.
 
 _If the change is expected to be [released or impact production](https://kb.extendhealth.com/x/HQSLEg):_
-1. PR must be approved by atleast one [technical attestor](https://kb.extendhealth.com/x/2gZmEQ) certifying that the changes satisfy our [Definition of Confidence (DoC)](https://kb.extendhealth.com/x/jcFaCg)
+1. PR must be approved by atleast one [technical attestor](https://kb.extendhealth.com/x/2gZmEQ) certifying that the changes satisfy our [Definition of Releasability (DoC)](https://kb.extendhealth.com/x/jcFaCg)
 1. Each commit must reference a JIRA Story
 1. At least one automated tests is ran in CI
 1. [GitHub Release](https://kb.extendhealth.com/x/nQepEQ) is generated from a successful `master` build in CI
@@ -51,8 +51,10 @@ _When creating a PR:_
 
 > For additional details on what is expected during a PR, see [WE: Pull Request Guidelines](https://kb.extendhealth.com/x/UTWwCg)
 
-## Definition of Confidence
-As part of the pull requests, parties involved in a unit of work review the [Definition of Confidence (DoC)](https://kb.extendhealth.com/x/jcFaCg) strategies that pertain to the changes.
+## Definition of Releasability
+_Also known as our:_
+#### Definition of Confidence
+As part of the pull requests, parties involved in a unit of work review the [Definition of Releasability (DoR)](https://kb.extendhealth.com/x/jcFaCg) strategies that pertain to the changes.
 
 ## Strategies
 ### Architecture Strategy
