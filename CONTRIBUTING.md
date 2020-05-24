@@ -28,7 +28,7 @@ Building on the WE Product Family's [Definition of Releasability](https://kb.ext
 
 _If the change is expected to be [released or impact production](https://kb.extendhealth.com/x/HQSLEg):_
 1. PR must be approved by atleast one [technical attestor](https://kb.extendhealth.com/x/2gZmEQ) certifying that the changes satisfy our [Definition of Releasability (DoC)](https://kb.extendhealth.com/x/jcFaCg)
-1. Each commit must reference a JIRA Story
+1. JIRA Story must be referenced in the PR's title, description or in its commits
 1. At least one automated tests is ran in CI
 1. [GitHub Release](https://kb.extendhealth.com/x/nQepEQ) is generated from a successful `master` build in CI
 
