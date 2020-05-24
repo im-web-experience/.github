@@ -32,7 +32,7 @@ _If the change is expected to be [released or impact production](https://kb.exte
 1. At least one automated tests is ran in CI
 1. [GitHub Release](https://kb.extendhealth.com/x/nQepEQ) is generated from a successful `master` build in CI
 
-A project repo's administrator is responsible for verifying that [any production change](https://kb.extendhealth.com/x/HQSLEg) si approved by a [technical attestor](https://kb.extendhealth.com/x/2gZmEQ) on a [GitHub PR](#create-a-pull-request) and a Jira commit is referenced.
+A project repo's administrator is responsible for verifying that [any production change](https://kb.extendhealth.com/x/HQSLEg) is approved by a [technical attestor](https://kb.extendhealth.com/x/2gZmEQ) on a [GitHub PR](#create-a-pull-request) and Jira work items are referenced.
 
 > See [WE: Audit Evidence KB](https://kb.extendhealth.com/x/kYGBD) for additional details
 
