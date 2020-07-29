@@ -62,6 +62,7 @@ As part of the pull requests, parties involved in a unit of work review the [Def
   - [ ] [Performance Standards](https://kb.extendhealth.com/x/yJMYCg): additional latency or load time has not been introduced?
   - [ ] [Transient Fault Handling Standards](https://kb.extendhealth.com/x/MISwCw): coded with the anticipation of failure?
   - [ ] [Security Standards](https://kb.extendhealth.com/x/84qvCQ): newly introduced logic meets our security standards?
+  - [ ] [Logging Standrds](https://kb.extendhealth.com/x/oZuFCg): newly introduced logic meets our logging standards?
 - [ ] [UI Standards](https://kb.extendhealth.com/x/Uo-7Cg) & [Browser Standards](https://kb.extendhealth.com/x/rwNHD)
   - [ ] [Accessibility Standards](https://kb.extendhealth.com/x/CNoYCg)
   - [ ] [React Standards](https://kb.extendhealth.com/x/_wdtE) & [Styled Component Standards](https://kb.extendhealth.com/x/-gVtE)
