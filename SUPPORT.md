@@ -11,12 +11,6 @@ Other technical documentation may be found in the project's GitHub Wiki and/or [
 - [Decision Records](#decision-records)
 
 ## Communication
-- **Chat**: [#web-experience](https://wtw-im.slack.com/messages/CAYDVP41X) Slack channel
-- **Jira**: [WE Jira Project](https://kb.extendhealth.com/x/EBCGCQ)
-- **KB**: [Web Experience Confluence Space](https://kb.extendhealth.com/x/TaVoCQ)
-- **Team Ownership Distribution**: https://kb.extendhealth.com/x/5bNaCg
-- **Production Support**: [alert responders](https://kb.extendhealth.com/x/iQLHCw) are assigned to each [technical service](https://kb.extendhealth.com/x/5AZmEQ) owned by the product family
-
 > See [WE Communication KB](https://kb.extendhealth.com/x/TBJGCg) for additional details
 
 ## Objectives & Key Results
