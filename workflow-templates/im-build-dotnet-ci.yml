@@ -510,6 +510,7 @@ jobs:
 
       # TODO: Delete if you have other triggers for checkmarx scans and don't want it kicked off from the CI build
       #       The repository_dispatch event won't work until the checkmarx workflow has been merged to main for the first time.
+      #       If you want to add a PR status check, include the pr-sha property
       - name: Kick off Checkmarx if workflow succeeded
         if: steps.conclusion.outputs.workflow_conclusion == 'success'
         uses: actions/github-script@v5
