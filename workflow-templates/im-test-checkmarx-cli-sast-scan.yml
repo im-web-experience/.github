@@ -21,8 +21,8 @@ on:
   workflow_dispatch:
     inputs:
       branch-tag-sha:
-        description: The branch, tag or sha of the checkmarx scan should be run against.
-        required: true
+        description: The branch, tag or sha of the checkmarx scan should be run against. Leave blank to use workflow branch.
+        required: false
   schedule:
     # See the following site for help creating the right cron syntax: https://crontab.guru/
     # The cron job is specified in UTC.
@@ -31,27 +31,47 @@ on:
     - cron: 5 4 * * 2
   repository_dispatch:
     types: [run_checkmarx]
-    # Expects a client payload like : { ref: value-of-ref}
+    # Expects a client payload like : { ref: value-of-ref, pr-sha: head sha}
 
+concurrency:
+  group: ${{ github.workflow }}-${{ github.event.inputs.branch-tag-sha || github.event.client_payload.ref || github.ref }}
+
+env:
+  REFERENCE: ${{ github.event.inputs.branch-tag-sha || github.event.client_payload.ref || github.ref_name }}
+  RUNNER_URL: ${{ GITHUB_SERVER_URL }}/${{ GITHUB_REPOSITORY }}/actions/runs/${{ GITHUB_RUN_ID }}
+  TIMEZONE: 'america/denver' # TODO: Verify timezone
+  
 jobs:
   scan-the-code:
     runs-on: [self-hosted, ubuntu-20.04]
     steps:
-      - name: Checkout main for Schedule Trigger
-        uses: actions/checkout@v2
-        if: github.event_name == 'schedule'
-
-      - name: Checkout Provided Ref for Repository Dispatch Trigger
-        uses: actions/checkout@v2
-        if: github.event_name == 'repository_dispatch'
+      - name: Checkout Repository
+        uses: actions/checkout@v3
         with:
-          ref: ${{ github.event.client_payload.ref }}
-
-      - name: Checkout provided branch/tag/sha for Workflow Dispatch Trigger
-        uses: actions/checkout@v2
-        if: github.event_name == 'workflow_dispatch'
+          ref: ${{ env.REFERENCE }}
+          
+      - name: Add status check to PR
+        if: github.event.client_payload.pr-sha != 0
+        id: create-check
+        uses: actions/github-script@v6
         with:
-          ref: ${{ github.event.inputs.branch-tag-sha }}
+          script: |
+            const { owner, repo } = context.repo;                     
+            const response = await github.rest.checks.create({
+              owner,
+              repo,
+              head_sha: '${{ github.event.client_payload.pr-sha }}', 
+              name: 'status check - checkmarx',
+              status: 'in_progress',
+              details_url: '${{ env.RUNNER_URL }}',
+              external_id: context.runId.toString(),
+              output: {
+                title: 'Checkmarx SAST Scan',
+                summary: 'Pending',
+                text: '${{ env.RUNNER_URL }}'
+              }
+            });
+            return response.data.id;
 
       - name: Run the Scan
         id: scan
@@ -88,3 +108,37 @@ jobs:
         with:
           name: Checkmarx Report
           path: ${{ steps.scan.outputs.report-path }}
+          
+      - name: Complete status check on PR
+        if: always() && steps.create-check.outcome == 'success'
+        uses: actions/github-script@v6
+        with:
+          script: |
+            const { owner, repo } = context.repo;            
+            await github.rest.checks.update({
+              owner: owner,
+              repo: repo,
+              check_run_id: '${{ steps.create-check.outputs.result }}', 
+              completed_at: new Date().toISOString(),
+              status: 'completed',
+              conclusion: '${{ (steps.scan.outcome == 'success' && 'success') || 'action_required' }}',
+              output: {
+                title: 'Checkmarx SAST Scan',
+                summary: 'This security scan completed.',
+                text: `See [PDF Report](${{ env.RUNNER_URL }}) for results.`,
+              }
+            });
+          
+      - name: Send Status to Teams
+        if: failure() && github.event.client_payload.pr-sha == 0 && secrets.MS_TEAMS_URI != 0
+        uses: im-open/post-status-to-teams-action@v1.1.2
+        with:
+          title: Checkmarx Security Analysis
+          workflow-status: ${{ steps.conclusion.outputs.workflow_conclusion }}
+          workflow-type: Deploy
+          teams-uri: ${{ secrets.MS_TEAMS_URI }} # This is a repo-level secret (unless 'environment:' has been added to this job)
+          timezone: ${{ env.TIMEZONE }}
+          custom-facts: |
+            [
+              { "name": "Actor", "value": "${{ github.event.client_payload.actor || github.actor }}" }
+            ]
