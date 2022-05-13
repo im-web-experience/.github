@@ -445,7 +445,7 @@ jobs:
   finish-build:
     if: always() && needs.examine-triggers.outputs.CONTINUE_WORKFLOW == 'true'
     needs: # TODO: Update the needs [] list if any jobs were added/removed/renamed
-      [dotnet-build-and-test, jest, build-deployment-artifacts]
+      [examine-triggers, dotnet-build-and-test, jest, build-deployment-artifacts]
     runs-on: ubuntu-latest # Force this to run on github-hosted runner by using a tag that does not exist on self-hosted runners
     steps:
       - uses: im-open/workflow-conclusion@v2.0.2
@@ -516,11 +516,14 @@ jobs:
         with:
           github-token: ${{ secrets.PIPELINE_BOT_PAT }} # This is an org-level secret
           script: |
+            const addStatusCheck = ${{ needs.examine-triggers.outputs.IS_PRERELEASE == 'true' }};
             github.rest.repos.createDispatchEvent({
               owner: context.repo.owner,
               repo: context.repo.repo,
               event_type: 'run_checkmarx',
               client_payload: {
-                ref: "${{ needs.build-deployment-artifacts.outputs.NEXT_VERSION }}"
+                "ref": "${{ needs.build-deployment-artifacts.outputs.NEXT_VERSION }}",
+                "actor": "${{ github.actor }}",
+                "pr-sha": addStatusCheck ? context.payload.pull_request.head.sha : undefined,
               }
             });
