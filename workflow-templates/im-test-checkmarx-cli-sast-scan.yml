@@ -38,7 +38,7 @@ concurrency:
 
 env:
   REFERENCE: ${{ github.event.inputs.branch-tag-sha || github.event.client_payload.ref || github.ref_name }}
-  RUNNER_URL: ${{ GITHUB_SERVER_URL }}/${{ GITHUB_REPOSITORY }}/actions/runs/${{ GITHUB_RUN_ID }}
+  RUNNER_URL: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
   TIMEZONE: 'america/denver' # TODO: Verify timezone
   
 jobs:
