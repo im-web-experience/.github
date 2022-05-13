@@ -525,6 +525,6 @@ jobs:
               client_payload: {
                 "ref": "${{ needs.build-deployment-artifacts.outputs.NEXT_VERSION }}",
                 "actor": "${{ github.actor }}",
-                "pr-sha": addStatusCheck ? context.payload.pull_request.head.sha : undefined,
+                "pr-sha": "${{ (needs.examine-triggers.outputs.IS_PRERELEASE == 'true' && env.GITUB_SHA) || '' }}"
               }
             });
